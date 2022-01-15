@@ -88,7 +88,7 @@ function PackMan:install(pack)
   else
     local error = os.execute(command)
     while error ~= 0 do
-        io.write('error occurs when downloading the plugin, retrying...')
+        io.write('error occurs when downloading the plugin, retrying...\n')
         error = os.execute(command)
     end
     post_install(pack)
